@@ -10,8 +10,9 @@ class CreateParqueaderos < ActiveRecord::Migration[5.1]
       t.string :email ,null: false, :limit =>50
       t.string :telefono1 ,null: false, :limit =>20
       t.string :telefono2, :limit =>20
-
-      t.timestamps
+      t.decimal :latitud, :limit =>30
+      t.decimal :longitud, :limit =>30
+     t.timestamps
     end
   end
 end

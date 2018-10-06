@@ -47,6 +47,6 @@ class ParqueaderosController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def parqueadero_params
-      params.require(:parqueadero).permit(:nombre, :direccion, :servicios_adicionales, :caracteristicas, :condiciones, :calificacion, :email, :telefono1, :telefono2)
+      params.require(:parqueadero).permit(:nombre, :direccion, :servicios_adicionales, :caracteristicas, :condiciones, :calificacion, :email, :telefono1, :telefono2, :latitud, :longitud)
     end
 end

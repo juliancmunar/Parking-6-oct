@@ -2603,3 +2603,66 @@ Processing by UsuarioTokenController#create as HTML
 Completed 201 Created in 107ms (Views: 1.0ms | ActiveRecord: 2.0ms)
 
 
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 14:22:36 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ferchofpz@hotmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"ferchofpz@hotmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "ferchofpz@hotmail.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 14:22:53 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 14:23:09 -0500
+Processing by UsuariosController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-06 14:23:13 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 14:23:38 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "ferchofpz@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.9ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'ferchofpz@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 95ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 14:30:19 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (13.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "ferchofpz@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'ferchofpz@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 109ms (Views: 0.8ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 14:36:36 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "ferchofpz@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'ferchofpz@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 95ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-10-06 15:43:30 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (4.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (10.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 188ms (Views: 1.2ms | ActiveRecord: 14.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-10-06 16:08:17 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (3.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 530ms (Views: 24.5ms | ActiveRecord: 66.0ms)
+
+
