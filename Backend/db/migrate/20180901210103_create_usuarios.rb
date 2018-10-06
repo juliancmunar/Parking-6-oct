@@ -8,7 +8,6 @@ class CreateUsuarios < ActiveRecord::Migration[5.1]
       t.string :telefono ,null: false, :limit =>20
       t.string :password_digest ,null: false
       t.references :role, foreign_key: true
-
       t.timestamps
     end
   end

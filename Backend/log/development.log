@@ -1346,3 +1346,1260 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-06 10:27:31 -0500
+  
+PG::ConnectionBad (FATAL:  no existe la base de datos «parking_db»
+):
+  
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `new'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-10-06 10:27:34 -0500
+  
+PG::ConnectionBad (FATAL:  no existe la base de datos «parking_db»
+):
+  
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `new'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (66.2ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.7ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (59.6ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (55.2ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (42.2ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (14.5ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (32.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (58.5ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (50.3ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (41.3ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (56.8ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.1ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (45.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180901210718)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180901210001),
+(20180901210002),
+(20180901210003),
+(20180901210103),
+(20180901210200),
+(20180901210231),
+(20180901210321),
+(20180901210520),
+(20180901210539),
+(20180901210706);
+
+[0m
+  [1m[35m (65.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-10-06 15:28:24.087807"], ["updated_at", "2018-10-06 15:28:24.087807"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (63.0ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (76.1ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (155.0ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (49.5ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (26.8ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (51.9ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (40.4ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (43.8ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (27.5ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (5.8ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-10-06 15:28:25.220539"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-10-06 15:28:25.343130"], ["updated_at", "2018-10-06 15:28:25.343130"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-10-06 15:28:25.343130"], ["updated_at", "2018-10-06 15:28:25.343130"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-10-06 15:28:25.343130"], ["updated_at", "2018-10-06 15:28:25.343130"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-10-06 15:28:25.368305"], ["updated_at", "2018-10-06 15:28:25.368305"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-10-06 15:28:25.372308"], ["updated_at", "2018-10-06 15:28:25.372308"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-10-06 15:28:25.374310"], ["updated_at", "2018-10-06 15:28:25.374310"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "5.0"], ["nombres", "Julian"], ["apellidos", "Munar"], ["email", "juliancmunar@gmail.com"], ["telefono", "1234"], ["password_digest", "$2a$10$lI1ouXViZBleM5kH2RJ8rOKz/nR2/9VWU7TF9u6Ftv1b0nEg.bwty"], ["role_id", 2], ["created_at", "2018-10-06 15:28:31.312436"], ["updated_at", "2018-10-06 15:28:31.312436"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-10-06 15:28:41.784495"], ["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-10-06 10:28:47 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-10-06 10:28:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:29:02 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (11.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+Completed 404 Not Found in 36ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 172.25.1.242 at 2018-10-06 10:29:53 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 172.25.1.242 at 2018-10-06 10:30:12 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:30:25 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:30:42 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 205ms (Views: 0.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:31:09 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 85ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:41:40 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 89ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuario_token" for 127.0.0.1 at 2018-10-06 10:44:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/usuario_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuario_token" for 127.0.0.1 at 2018-10-06 10:44:53 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/usuario_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuarios_token" for 127.0.0.1 at 2018-10-06 10:45:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/usuarios_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuario_token" for 127.0.0.1 at 2018-10-06 10:45:16 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/usuario_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuario_tokens" for 127.0.0.1 at 2018-10-06 10:45:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/usuario_tokens"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:45:41 -0500
+Processing by UsuariosController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/id" for 127.0.0.1 at 2018-10-06 10:45:52 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"id"}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-10-06 10:45:56 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-10-06 10:48:49 -0500
+Processing by UsuariosController#show as */*
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-10-06 10:49:17 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	id = '1'
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+	id = '1'
+}'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/usuario_token" for 127.0.0.1 at 2018-10-06 10:50:51 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"auth":
+	{email:"juliancmunar@gmail.com",
+	password: "password"}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+	"auth":
+	{email:"juliancmunar@gmail.com",
+	password: "password"}
+}'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/usuario_token" for 127.0.0.1 at 2018-10-06 10:50:53 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"auth":
+	{email:"juliancmunar@gmail.com",
+	password: "password"}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+	"auth":
+	{email:"juliancmunar@gmail.com",
+	password: "password"}
+}'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/usuario_token" for 127.0.0.1 at 2018-10-06 10:51:11 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 96ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-10-06 10:52:30 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	"auth":
+	{
+		"id":"1",
+}
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+	"auth":
+	{
+		"id":"1",
+}
+}'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:52:48 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+
+	{
+		"id":"1",
+
+}
+  
+ActionDispatch::Http::Parameters::ParseError (822: unexpected token at '{
+		"id":"1",
+
+}'):
+  
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/parameters.rb:109:in `parse_formatted_parameters'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:361:in `block in POST'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch'
+rack (2.0.5) lib/rack/request.rb:57:in `fetch_header'
+actionpack (5.1.6) lib/action_dispatch/http/request.rb:360:in `POST'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:286:in `_wrapper_enabled?'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:235:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:52:55 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>"1", "usuario"=>{"id"=>"1"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:52:57 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>"1", "usuario"=>{"id"=>"1"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:53:02 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>1, "usuario"=>{"id"=>1}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:53:13 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>"1", "usuario"=>{"id"=>"1"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:53:19 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>"85", "usuario"=>{"id"=>"85"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-10-06 10:53:24 -0500
+Processing by UsuariosController#index as */*
+  Parameters: {"id"=>"1", "usuario"=>{"id"=>"1"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:58:15 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant UsuarioTokenController::User):
+  
+app/controllers/usuario_token_controller.rb:5:in `create'
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 10:58:36 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 181ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:03:03 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 89ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:03:16 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 94ms (Views: 1.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:04:47 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:05:04 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:05:11 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"asd", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:05:23 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 92ms (Views: 0.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:06:04 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:06:08 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:19:44 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:27:44 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:29:05 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:32:40 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.8ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:33:14 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:36:54 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 11:37:06 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (15.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (15.6ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 100ms (Views: 0.7ms | ActiveRecord: 31.3ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 12:07:40 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"jj", "apellidos"=>"jj", "email"=>"jj", "telefono"=>"jj", "password_digest"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"jj", "apellidos"=>"jj", "email"=>"jj", "telefono"=>"jj", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (20.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "4.0"], ["nombres", "jj"], ["apellidos", "jj"], ["email", "jj"], ["telefono", "jj"], ["password_digest", "jj"], ["role_id", 2], ["created_at", "2018-10-06 17:07:40.377631"], ["updated_at", "2018-10-06 17:07:40.377631"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 143ms (Views: 1.4ms | ActiveRecord: 48.1ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:15:41 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"e", "apellidos"=>"e", "email"=>"e", "telefono"=>"e", "password_digest"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"e", "apellidos"=>"e", "email"=>"e", "telefono"=>"e", "password_digest"=>"[FILTERED]", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "4.0"], ["nombres", "e"], ["apellidos", "e"], ["email", "e"], ["telefono", "e"], ["password_digest", "e"], ["role_id", 2], ["created_at", "2018-10-06 18:15:41.690180"], ["updated_at", "2018-10-06 18:15:41.690180"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 10ms (Views: 0.8ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 13:20:44 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"e", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"e", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "e"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms)
+
+
+  
+BCrypt::Errors::InvalidHash (invalid hash):
+  
+bcrypt-3.1.12-x86 (mingw32) lib/bcrypt/password.rb:60:in `initialize'
+activemodel (5.1.6) lib/active_model/secure_password.rb:95:in `new'
+activemodel (5.1.6) lib/active_model/secure_password.rb:95:in `authenticate'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-10-06 13:21:09 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 13:21:50 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'juliancmunar@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 93ms (Views: 1.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:24:30 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 179ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:24:57 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:29:20 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 34ms (Views: 0.2ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:29:53 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 98ms (Views: 0.4ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:30:38 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 53ms (Views: 0.3ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:33:03 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"julian", "apellidos"=>"munar", "email"=>"asd", "telefono"=>"asd", "role_id"=>2}}
+Unpermitted parameters: :Password_confirmation, :usuario
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "4.0"], ["nombres", "julian"], ["apellidos", "munar"], ["email", "asd"], ["telefono", "asd"], ["password_digest", "$2a$10$5lkfxxSBn/W8jipnyZeusO1RlBMPkWw8z6htnwTILH2pgvv6X3oSS"], ["role_id", 2], ["created_at", "2018-10-06 18:33:18.930094"], ["updated_at", "2018-10-06 18:33:18.930094"]]
+  [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 5771ms (Views: 1.8ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/usuarios" for 172.25.1.242 at 2018-10-06 13:45:06 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"calificacion"=>4, "nombres"=>"Fernando", "apellidos"=>"Perez Perez", "email"=>"ferchofpz@gmail.com", "telefono"=>"3202899742", "password"=>"[FILTERED]", "Password_confirmation"=>"[FILTERED]", "role_id"=>2, "password_confirmation"=>"[FILTERED]", "usuario"=>{"calificacion"=>4, "nombres"=>"Fernando", "apellidos"=>"Perez Perez", "email"=>"ferchofpz@gmail.com", "telefono"=>"3202899742", "role_id"=>2}}
+Unpermitted parameters: :Password_confirmation, :usuario
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "4.0"], ["nombres", "Fernando"], ["apellidos", "Perez Perez"], ["email", "ferchofpz@gmail.com"], ["telefono", "3202899742"], ["password_digest", "$2a$10$rXRIUMWA4eIDXovcFrUHzefyZ2bXYimajvelp936HFVGrU5kqQrHC"], ["role_id", 2], ["created_at", "2018-10-06 18:45:06.511055"], ["updated_at", "2018-10-06 18:45:06.511055"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 108ms (Views: 1.0ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/usuario_token" for 172.25.1.242 at 2018-10-06 13:45:36 -0500
+Processing by UsuarioTokenController#create as HTML
+  Parameters: {"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"ferchofpz@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "ferchofpz@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE (email = 'ferchofpz@gmail.com') ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 201 Created in 107ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
