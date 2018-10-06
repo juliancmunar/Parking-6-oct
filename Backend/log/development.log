@@ -1,0 +1,1348 @@
+  [1m[35m (203.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsuarios (20180901210103)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (65.5ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+)[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsuarios (20180901210103)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (91.6ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRoles (20180901210001)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210001"]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTiposDeCupos (20180901210002)
+  [1m[35m (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (34.3ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210002"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTipoDePlans (20180901210003)
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.2ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210003"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsuarios (20180901210103)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (104.1ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+)[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210103"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParqueaderos (20180901210200)
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.0ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210200"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCupos (20180901210231)
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipo_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_9558f5bb39"
+FOREIGN KEY ("tipo_de_cupo_id")
+  REFERENCES "tipo_de_cupos" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCupos (20180901210231)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.3ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+)[0m
+  [1m[35m (23.1ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210231"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHorarios (20180901210321)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (48.8ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+)[0m
+  [1m[35m (20.2ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210321"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTarifas (20180901210520)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipo_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_66ba749796"
+FOREIGN KEY ("tipo_de_cupo_id")
+  REFERENCES "tipo_de_cupos" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTarifas (20180901210520)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.5ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210520"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlans (20180901210539)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlans (20180901210539)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (54.2ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipo_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_d86686e369"
+FOREIGN KEY ("tipo_de_cupo_id")
+  REFERENCES "tipo_de_cupos" ("id")
+, CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlans (20180901210539)
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+, CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+, CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+)[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210539"]]
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateImages (20180901210706)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (40.3ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+)[0m
+  [1m[35m (25.3ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210706"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsuarioxparqueaderos (20180901210718)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (58.6ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+, CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+)[0m
+  [1m[35m (23.3ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180901210718"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-08 15:57:04.141402"], ["updated_at", "2018-09-08 15:57:04.141402"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-09-08 10:58:53 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (10.3ms)
+Completed 200 OK in 345ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-08 10:58:54 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/parqueaderos/show" for 127.0.0.1 at 2018-09-08 11:01:07 -0500
+Processing by ParqueaderosController#show as HTML
+  Parameters: {"id"=>"show"}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (c:/Users/ANDAP/Documents/FerPerez/parking/app/models/parqueadero.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+    has_many :usuarios, through usuarioxparqueaderos
+                                                    ^):
+  
+app/models/parqueadero.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/controllers/parqueaderos_controller.rb:44:in `set_parqueadero'
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:06:55 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (2.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 89ms (Views: 4.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:08:29 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:09:46 -0500
+Processing by TiposDeCuposController#create as */*
+  Parameters: {"tipo_de_cupo"=>"carros", "tipos_de_cupo"=>{"tipo_de_cupo"=>"carros"}}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "carros"], ["created_at", "2018-09-08 16:09:46.133327"], ["updated_at", "2018-09-08 16:09:46.133327"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 201 Created in 46ms (Views: 1.5ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:10:12 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-08 16:16:10.414077"], ["updated_at", "2018-09-08 16:16:10.414077"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-08 16:16:10.423083"], ["updated_at", "2018-09-08 16:16:10.423083"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:16:21 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (1.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:26:34 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:26:36 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:26:50 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:28:28 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:28:29 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:28:35 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:17 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:17 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:18 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:19 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (1.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:19 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (1.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:27 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:27 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:28 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (0.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipos_de_cupos" for 127.0.0.1 at 2018-09-08 11:29:28 -0500
+Processing by TiposDeCuposController#index as HTML
+  [1m[36mTiposDeCupo Load (1.0ms)[0m  [1m[34mSELECT "tipos_de_cupos".* FROM "tipos_de_cupos"[0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35mSQL (12.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (75.1ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (31.8ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (30.5ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (69.0ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (27.0ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (84.1ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (63.1ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (49.9ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (38.9ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (43.3ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (40.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (41.1ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (5.4ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180901210718)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180901210001),
+(20180901210002),
+(20180901210003),
+(20180901210103),
+(20180901210200),
+(20180901210231),
+(20180901210321),
+(20180901210520),
+(20180901210539),
+(20180901210706);
+
+[0m
+  [1m[35m (74.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-22 14:21:38.653978"], ["updated_at", "2018-09-22 14:21:38.653978"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (24.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (25.0ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (15.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (55.0ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (25.7ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (51.3ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (14.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (71.0ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (25.0ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (48.0ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (19.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-09-22 14:21:39.609044"], ["key", "environment"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:21:39.743858"], ["updated_at", "2018-09-22 14:21:39.743858"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:21:39.752863"], ["updated_at", "2018-09-22 14:21:39.752863"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-09-22 14:25:26.451973"], ["key", "environment"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:25:35.662071"], ["updated_at", "2018-09-22 14:25:35.662071"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:25:35.666073"], ["updated_at", "2018-09-22 14:25:35.666073"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 14:25:35.669076"], ["updated_at", "2018-09-22 14:25:35.669076"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 14:25:35.683085"], ["updated_at", "2018-09-22 14:25:35.683085"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 14:25:35.687088"], ["updated_at", "2018-09-22 14:25:35.687088"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 14:25:35.689089"], ["updated_at", "2018-09-22 14:25:35.689089"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:33:15.333051"], ["updated_at", "2018-09-22 14:33:15.333051"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:33:15.342062"], ["updated_at", "2018-09-22 14:33:15.342062"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 14:33:15.344632"], ["updated_at", "2018-09-22 14:33:15.344632"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 14:33:15.357667"], ["updated_at", "2018-09-22 14:33:15.357667"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 14:33:15.360668"], ["updated_at", "2018-09-22 14:33:15.360668"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 14:33:15.362669"], ["updated_at", "2018-09-22 14:33:15.362669"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:33:43.417656"], ["updated_at", "2018-09-22 14:33:43.417656"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:33:43.426662"], ["updated_at", "2018-09-22 14:33:43.426662"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 14:33:43.428667"], ["updated_at", "2018-09-22 14:33:43.428667"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 14:33:43.444677"], ["updated_at", "2018-09-22 14:33:43.444677"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 14:33:43.447674"], ["updated_at", "2018-09-22 14:33:43.447674"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 14:33:43.449676"], ["updated_at", "2018-09-22 14:33:43.449676"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:35:13.490074"], ["updated_at", "2018-09-22 14:35:13.490074"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:35:13.498079"], ["updated_at", "2018-09-22 14:35:13.498079"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 14:35:13.501082"], ["updated_at", "2018-09-22 14:35:13.501082"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 14:35:13.517092"], ["updated_at", "2018-09-22 14:35:13.517092"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 14:35:13.520094"], ["updated_at", "2018-09-22 14:35:13.520094"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 14:35:13.522095"], ["updated_at", "2018-09-22 14:35:13.522095"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 14:37:11.434495"], ["updated_at", "2018-09-22 14:37:11.434495"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 14:37:11.443500"], ["updated_at", "2018-09-22 14:37:11.443500"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 14:37:11.445504"], ["updated_at", "2018-09-22 14:37:11.445504"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 14:37:11.459512"], ["updated_at", "2018-09-22 14:37:11.459512"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 14:37:11.462514"], ["updated_at", "2018-09-22 14:37:11.462514"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 14:37:11.464515"], ["updated_at", "2018-09-22 14:37:11.464515"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "5.0"], ["nombres", "Julian"], ["apellidos", "Munar"], ["email", "juliancmunar@gmail.com"], ["telefono", "1234"], ["password_digest", "password"], ["role_id", 2], ["created_at", "2018-09-22 16:15:20.658700"], ["updated_at", "2018-09-22 16:15:20.658700"]]
+  [1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "5.0"], ["nombres", "Julian"], ["apellidos", "Munar"], ["email", "juliancmunar@gmail.com"], ["telefono", "1234"], ["password_digest", "$2a$10$LNbERPOfMD4nTP0D/s29PeEUlCwW4k6JtQikXCXl554JdtwRpgR1K"], ["role_id", 2], ["created_at", "2018-09-22 16:15:56.135977"], ["updated_at", "2018-09-22 16:15:56.135977"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:37:52 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 134ms (ActiveRecord: 8.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:38:07 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 10.0ms)
+
+
+  
+NoMethodError (undefined method `credentials' for #<Api::Application:0x4175640>):
+  
+config/initializers/knock.rb:2:in `block (2 levels) in <top (required)>'
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:38:34 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 108ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `credentials' for #<Api::Application:0x4175640>):
+  
+config/initializers/knock.rb:2:in `block (2 levels) in <top (required)>'
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:38:52 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 162ms (Views: 0.3ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:00 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 172ms (ActiveRecord: 13.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:10 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar1@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar1@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar1@gmail.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:25 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"calificacion"=>"5.0", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"calificacion"=>"5.0", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :calificacion
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:33 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"calificacion"=>"5", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"calificacion"=>"5", "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :calificacion
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:40 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"calificacion"=>5, "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"calificacion"=>5, "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :calificacion
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:44 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"calificacion"=>5.0, "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"calificacion"=>5.0, "password"=>"[FILTERED]"}}}
+Unpermitted parameter: :calificacion
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/usuario_token" for 127.0.0.1 at 2018-09-22 11:39:52 -0500
+Processing by UsuarioTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}, "usuario_token"=>{"auth"=>{"email"=>"juliancmunar@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."email" = $1 LIMIT $2[0m  [["email", "juliancmunar@gmail.com"], ["LIMIT", 1]]
+Completed 201 Created in 116ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-09-22 11:47:05 -0500
+Processing by UsuariosController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/roles" for 127.0.0.1 at 2018-09-22 11:47:26 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roles"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-22 11:47:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/tipo_de_plans" for 127.0.0.1 at 2018-09-22 11:48:14 -0500
+Processing by TipoDePlansController#index as HTML
+  [1m[36mTipoDePlan Load (5.1ms)[0m  [1m[34mSELECT "tipo_de_plans".* FROM "tipo_de_plans"[0m
+Completed 200 OK in 18ms (Views: 3.1ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/tipo_de_plans" for 127.0.0.1 at 2018-09-22 11:49:19 -0500
+Processing by TipoDePlansController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (44.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-22 18:35:00.833332"], ["updated_at", "2018-09-22 18:35:00.833332"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-22 18:35:00.908458"], ["updated_at", "2018-09-22 18:35:00.908458"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-22 18:35:00.912461"], ["updated_at", "2018-09-22 18:35:00.912461"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (48.2ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-22 18:35:00.941480"], ["updated_at", "2018-09-22 18:35:00.941480"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-22 18:35:00.992702"], ["updated_at", "2018-09-22 18:35:00.992702"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-22 18:35:00.996705"], ["updated_at", "2018-09-22 18:35:00.996705"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (26.7ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "5.0"], ["nombres", "Julian"], ["apellidos", "Munar"], ["email", "juliancmunar@gmail.com"], ["telefono", "1234"], ["password_digest", "$2a$10$5hqNcT0C90cnN5YH9/AlQeO6kFEt0GEGjLZypyr6vgLUb1YrgrxkK"], ["role_id", 2], ["created_at", "2018-09-22 18:35:07.219118"], ["updated_at", "2018-09-22 18:35:07.219118"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2018-09-22 14:12:24 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.3/lib/ruby/gems/2.3.0/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (25.2ms)
+Completed 200 OK in 678ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-22 14:12:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/usuarios" for 127.0.0.1 at 2018-09-22 14:12:32 -0500
+Processing by UsuariosController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-29 14:04:11 -0500
+  
+PG::ConnectionBad (FATAL:  no existe la base de datos «parking_db»
+):
+  
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `new'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-29 14:04:16 -0500
+  
+PG::ConnectionBad (FATAL:  no existe la base de datos «parking_db»
+):
+  
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `new'
+pg-1.1.2-x86 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:697:in `connect'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:221:in `initialize'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `new'
+activerecord (5.1.6) lib/active_record/connection_adapters/postgresql_adapter.rb:38:in `postgresql_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:759:in `new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:803:in `checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:782:in `try_to_checkout_new_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:743:in `acquire_connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:500:in `checkout'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:374:in `connection'
+activerecord (5.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:116:in `retrieve_connection'
+activerecord (5.1.6) lib/active_record/connection_handling.rb:88:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:562:in `connection'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35mSQL (7.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (29.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (56.1ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (33.4ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (90.7ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (55.7ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (95.9ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (55.0ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (61.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (41.8ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (41.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (77.4ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (30.3ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (25.5ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (22.4ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (51.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180901210718)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180901210001),
+(20180901210002),
+(20180901210003),
+(20180901210103),
+(20180901210200),
+(20180901210231),
+(20180901210321),
+(20180901210520),
+(20180901210539),
+(20180901210706);
+
+[0m
+  [1m[35m (62.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-09-29 19:06:38.120216"], ["updated_at", "2018-09-29 19:06:38.120216"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (26.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "cupos" CASCADE[0m
+  [1m[35m (36.8ms)[0m  [1m[35mCREATE TABLE "cupos" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "cantidad" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_parqueadero_id" ON "cupos"  ("parqueadero_id")[0m
+  [1m[35m (88.1ms)[0m  [1m[35mCREATE  INDEX  "index_cupos_on_tipos_de_cupo_id" ON "cupos"  ("tipos_de_cupo_id")[0m
+  [1m[35m (12.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "horarios" CASCADE[0m
+  [1m[35m (89.1ms)[0m  [1m[35mCREATE TABLE "horarios" ("id" bigserial primary key, "parqueadero_id" bigint, "dia_semana" character varying(10) NOT NULL, "hora_inicio" character varying(5) NOT NULL, "hora_fin" character varying(5) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (76.1ms)[0m  [1m[35mCREATE  INDEX  "index_horarios_on_parqueadero_id" ON "horarios"  ("parqueadero_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "images" CASCADE[0m
+  [1m[35m (184.2ms)[0m  [1m[35mCREATE TABLE "images" ("id" bigserial primary key, "parqueadero_id" bigint, "url_imagen" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (108.2ms)[0m  [1m[35mCREATE  INDEX  "index_images_on_parqueadero_id" ON "images"  ("parqueadero_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "parqueaderos" CASCADE[0m
+  [1m[35m (275.2ms)[0m  [1m[35mCREATE TABLE "parqueaderos" ("id" bigserial primary key, "nombre" character varying(50) NOT NULL, "direccion" character varying(50) NOT NULL, "servicios_adicionales" character varying(200), "caracteristicas" character varying(200), "condiciones" character varying(200), "calificacion" decimal NOT NULL, "email" character varying(50) NOT NULL, "telefono1" character varying(20) NOT NULL, "telefono2" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (24.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "plans" CASCADE[0m
+  [1m[35m (70.1ms)[0m  [1m[35mCREATE TABLE "plans" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "tipo_de_plan_id" bigint, "valor" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (46.9ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_parqueadero_id" ON "plans"  ("parqueadero_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipo_de_plan_id" ON "plans"  ("tipo_de_plan_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE  INDEX  "index_plans_on_tipos_de_cupo_id" ON "plans"  ("tipos_de_cupo_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles" CASCADE[0m
+  [1m[35m (47.7ms)[0m  [1m[35mCREATE TABLE "roles" ("id" bigserial primary key, "descripcion" character varying(20), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tarifas" CASCADE[0m
+  [1m[35m (24.0ms)[0m  [1m[35mCREATE TABLE "tarifas" ("id" bigserial primary key, "parqueadero_id" bigint, "tipos_de_cupo_id" bigint, "valor_minuto" integer NOT NULL, "descripcion" character varying(200), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (22.0ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_parqueadero_id" ON "tarifas"  ("parqueadero_id")[0m
+  [1m[35m (18.9ms)[0m  [1m[35mCREATE  INDEX  "index_tarifas_on_tipos_de_cupo_id" ON "tarifas"  ("tipos_de_cupo_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipo_de_plans" CASCADE[0m
+  [1m[35m (74.5ms)[0m  [1m[35mCREATE TABLE "tipo_de_plans" ("id" bigserial primary key, "tipo_de_plan" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "tipos_de_cupos" CASCADE[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE TABLE "tipos_de_cupos" ("id" bigserial primary key, "tipo_de_cupo" character varying(50) NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarios" CASCADE[0m
+  [1m[35m (110.7ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "calificacion" decimal NOT NULL, "nombres" character varying(50) NOT NULL, "apellidos" character varying(50) NOT NULL, "email" character varying(50) NOT NULL, "telefono" character varying(20) NOT NULL, "password_digest" character varying NOT NULL, "role_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE  INDEX  "index_usuarios_on_role_id" ON "usuarios"  ("role_id")[0m
+  [1m[35m (15.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "usuarioxparqueaderos" CASCADE[0m
+  [1m[35m (26.9ms)[0m  [1m[35mCREATE TABLE "usuarioxparqueaderos" ("id" bigserial primary key, "usuario_id" bigint, "parqueadero_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_parqueadero_id" ON "usuarioxparqueaderos"  ("parqueadero_id")[0m
+  [1m[35m (52.8ms)[0m  [1m[35mCREATE  INDEX  "index_usuarioxparqueaderos_on_usuario_id" ON "usuarioxparqueaderos"  ("usuario_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_e56f1317d5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (0.0ms)[0m  [1m[35mALTER TABLE "cupos" ADD CONSTRAINT "fk_rails_92beb53534"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (15.6ms)[0m  [1m[35mALTER TABLE "horarios" ADD CONSTRAINT "fk_rails_02e19981e5"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "images" ADD CONSTRAINT "fk_rails_2e991a680e"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_413ff36937"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_a8b0c42135"
+FOREIGN KEY ("tipo_de_plan_id")
+  REFERENCES "tipo_de_plans" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "plans" ADD CONSTRAINT "fk_rails_dd0553c397"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_f236120256"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "tarifas" ADD CONSTRAINT "fk_rails_82178cf60e"
+FOREIGN KEY ("tipos_de_cupo_id")
+  REFERENCES "tipos_de_cupos" ("id")
+[0m
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "usuarios" ADD CONSTRAINT "fk_rails_9bc66bae40"
+FOREIGN KEY ("role_id")
+  REFERENCES "roles" ("id")
+[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_0ab5a206b8"
+FOREIGN KEY ("parqueadero_id")
+  REFERENCES "parqueaderos" ("id")
+[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "usuarioxparqueaderos" ADD CONSTRAINT "fk_rails_f9ff5c6405"
+FOREIGN KEY ("usuario_id")
+  REFERENCES "usuarios" ("id")
+[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-09-29 19:06:39.988246"], ["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Motos"], ["created_at", "2018-09-29 19:06:40.112281"], ["updated_at", "2018-09-29 19:06:40.112281"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Bicicleta"], ["created_at", "2018-09-29 19:06:40.127910"], ["updated_at", "2018-09-29 19:06:40.127910"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tipos_de_cupos" ("tipo_de_cupo", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["tipo_de_cupo", "Carros"], ["created_at", "2018-09-29 19:06:40.131648"], ["updated_at", "2018-09-29 19:06:40.131648"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Administrador"], ["created_at", "2018-09-29 19:06:40.145556"], ["updated_at", "2018-09-29 19:06:40.145556"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Usuario"], ["created_at", "2018-09-29 19:06:40.148560"], ["updated_at", "2018-09-29 19:06:40.148560"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "roles" ("descripcion", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["descripcion", "Mixto"], ["created_at", "2018-09-29 19:06:40.149743"], ["updated_at", "2018-09-29 19:06:40.149743"]]
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (13.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("calificacion", "nombres", "apellidos", "email", "telefono", "password_digest", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["calificacion", "5.0"], ["nombres", "Julian"], ["apellidos", "Munar"], ["email", "juliancmunar@gmail.com"], ["telefono", "1234"], ["password_digest", "$2a$10$ZdvnT57JdhDVf8VMp/qb8ukSWzh3A3uPTGkd.lIHBT3xthEVw5pTK"], ["role_id", 2], ["created_at", "2018-09-29 19:06:46.637182"], ["updated_at", "2018-09-29 19:06:46.637182"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "development"], ["updated_at", "2018-09-29 19:08:11.606254"], ["key", "environment"]]
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(2888858392421585745)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-09-29 14:08:21 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2018-09-29 14:08:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 172.25.1.103 at 2018-09-29 16:22:34 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 312ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.25.1.103 at 2018-09-29 16:22:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 172.25.1.242 at 2018-09-29 16:23:35 -0500
+Processing by HomeController#index as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/favicon.ico" for 172.25.1.242 at 2018-09-29 16:23:35 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started OPTIONS "/usuario_token" for 172.25.1.242 at 2018-09-29 16:25:46 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/usuario_token"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

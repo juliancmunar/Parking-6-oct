@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parqueadero: one
+  tipo_de_cupo: one
+  tipo_de_plan: one
+  valor: 
+  descripcion: MyString
+
+two:
+  parqueadero: two
+  tipo_de_cupo: two
+  tipo_de_plan: two
+  valor: 
+  descripcion: MyString

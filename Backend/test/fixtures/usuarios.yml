@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calificacion: 9.99
+  nombres: MyString
+  apellidos: MyString
+  email: MyString
+  telefono: MyString
+  password_digest: MyString
+  role: one
+
+two:
+  calificacion: 9.99
+  nombres: MyString
+  apellidos: MyString
+  email: MyString
+  telefono: MyString
+  password_digest: MyString
+  role: two

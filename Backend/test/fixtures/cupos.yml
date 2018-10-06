@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parqueadero: one
+  tipo_de_cupo: one
+  cantidad: 1
+
+two:
+  parqueadero: two
+  tipo_de_cupo: two
+  cantidad: 1

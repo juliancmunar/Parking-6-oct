@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parqueadero: one
+  dia_semana: MyString
+  hora_inicio: MyString
+  hora_fin: MyString
+
+two:
+  parqueadero: two
+  dia_semana: MyString
+  hora_inicio: MyString
+  hora_fin: MyString
